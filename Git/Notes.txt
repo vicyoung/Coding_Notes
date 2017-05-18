@@ -1,0 +1,36 @@
+git init: generate git repository 
+git add <filename>: add a file to repository
+git commit -m "notes": submit changes with notes
+	git cm -m "notes"
+git status: obtain current state
+	git st
+git diff <filename>: show differences between working dir and repository
+git diff HEAD -- <filename>: show differences between working dir and committed repository
+git log: show modified histories
+git reset --hard HEAD^: roll to last version
+	HEAD: current version
+	HEAD^: last version
+	HEAD^^: last last version
+git reset --hard <commit id>: roll to <commit id> version
+git reflog: obtain <commit id> of history version
+git checkout -- <filename>: give up changes in working dir
+git reset HEAD <filename>: unstage after adding a file
+git rm <filename>: remove a file from repository
+git checkout -b <branchname>: create branch <branchname> and switch to new branch
+git branch: obtain current branches
+git checkout <branchname>: switch to branch <branchname>
+	git co
+git branch <branchname>: create a new branch <branchname>
+git merge <branchname>: merge <branchname> to current branch
+git branch -d <branchname>: delete <branchname>
+
+Operations in regard to GitHub
+ssh-keygen -t rsa -C "youremail@example.com": create ssh key
+~/.ssh/id_rsa.pub: public ssh key
+more id_rsa.pub: obtain key
+git remote add origin git@github.com:username/dir.git: relate local git
+git push -u origin master: push local working dir to github and relate 'master'
+git push origin master: push local working dir to github
+git pull origin master: pull github dir to local
+git clone git@github.com:username/dir.git: clone a github git to local dir 
+

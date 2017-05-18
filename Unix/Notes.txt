@@ -1,0 +1,18 @@
+cd dir/: change directory
+
+rm filename: remove file
+rm -rf filename: force to remove a file
+mv filename dir/: move a file to a diretory
+
+mkdir dir/: make directory
+rmdir dir/: remove directory
+
+ls: show contents
+ls -l: show contents with details
+ls -ah: show contents including hidden file
+
+zip -r filename.zip directory/: make zip
+
+cat filename: obtain file
+
+vim filename: open or create a file 
