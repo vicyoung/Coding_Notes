@@ -29,6 +29,7 @@ ssh-keygen -t rsa -C "youremail@example.com": create ssh key
 ~/.ssh/id_rsa.pub: public ssh key
 more id_rsa.pub: obtain key
 git remote add origin git@github.com:username/dir.git: relate local git
+git remote rm origin: disband from website
 git push -u origin master: push local working dir to github and relate 'master'
 git push origin master: push local working dir to github
 git pull origin master: pull github dir to local
