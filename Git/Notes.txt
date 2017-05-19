@@ -1,3 +1,9 @@
+git config --global user.name "<username>": set up user name
+git config --global user.email "<youremail>": set up email
+git config --global color.ui true: obtain colors in git
+.gitignore: write <filename> to ignore
+
+
 git init: generate git repository 
 git add <filename>: add a file to repository
 git commit -m "notes": submit changes with notes
@@ -16,6 +22,8 @@ git reflog: obtain <commit id> of history version
 git checkout -- <filename>: give up changes in working dir
 git reset HEAD <filename>: unstage after adding a file
 git rm <filename>: remove a file from repository
+
+
 git checkout -b <branchname>: create branch <branchname> and switch to new branch
 git branch: obtain current branches
 git checkout <branchname>: switch to branch <branchname>
@@ -23,15 +31,35 @@ git checkout <branchname>: switch to branch <branchname>
 git branch <branchname>: create a new branch <branchname>
 git merge <branchname>: merge <branchname> to current branch
 git branch -d <branchname>: delete <branchname>
+git branch -D <branchname>: force to delete <branchname>
+
+
+git stash: omit current working dir
+git stash list: obtain stash list
+git stash pop: recover omitted grogress and delete stash history
+git stash apply: recover progress
+git stash drop: delete stash history
+
 
 Operations in regard to GitHub
 ssh-keygen -t rsa -C "youremail@example.com": create ssh key
 ~/.ssh/id_rsa.pub: public ssh key
 more id_rsa.pub: obtain key
-git remote add origin git@github.com:username/dir.git: relate local git
+git remote add origin git@github.com:username/<dir.git>: relate local git
 git remote rm origin: disband from website
 git push -u origin master: push local working dir to github and relate 'master'
 git push origin master: push local working dir to github
 git pull origin master: pull github dir to local
-git clone git@github.com:username/dir.git: clone a github git to local dir 
-
+git clone git@github.com:username/<dir.git>: clone a github git to local dir 
+git checkout -b <branchname> origin/<branchname>: copy <branchname> to local
+git branch --set-upstream <branchname> origin/<branchname>: connect local <branchname> to github
+git remote -v: obtain details on github
+git tag <tagname>: add a tag (version No.)
+git tag <tagname> <commit id>: add a tag to version <commit id>
+git show <tagname>: obtain info of <tagname>
+git tag -a <tagname> -m "notes" <commit id>: take a note while adding a tag
+git tag -s <tagname>: signed version tag with PGP signature
+git tag -d <tagname>: delete <tagname>
+git push origin <tagname>: push <tagname>
+git push origin --tags: push all tags
+git push origin :refs/tags/<tagname>: delete a tag in github
